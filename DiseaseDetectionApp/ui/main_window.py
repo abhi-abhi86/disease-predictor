@@ -758,7 +758,7 @@ class MainWindow(QMainWindow):
         diagnosis_time_str = f"{diagnosis_time:.2f} seconds" if diagnosis_time > 0 else "N/A"
         output_html = (
             f"<h2 style='font-family: Arial, sans-serif; font-size: 18px; color: #2c3e50;'>{result.get('name', 'Unknown Disease')}</h2>"
-            f"<p style='font-size: 14px;'><b>Confidence Score:</b> <span style='color: {'green' if confidence >= 70 else 'orange' if confidence >= 50 else 'red'};'>{confidence:.1f}%</span></p>"
+            f"<p style='font-size: 14px;'><b>Confidence Score:</b> <span style='color: {'green' if confidence >= 80 else 'orange' if confidence >= 70 else 'red'};'>{confidence:.1f}%</span></p>"
             f"<p style='font-size: 14px;'><b>Predicted Stage:</b> <span style='color: #2c3e50;'>{predicted_stage}</span></p>"
             f"<p style='font-size: 14px;'><b>Diagnosis Time:</b> <span style='color: #2c3e50;'>{diagnosis_time_str}</span></p>"
             f"<p style='font-size: 14px;'><b>Description:</b><br><span style='color: #2c3e50;'>{result.get('description', 'No description available.')}</span></p>"

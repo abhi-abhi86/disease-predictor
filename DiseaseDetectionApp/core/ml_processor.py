@@ -41,7 +41,7 @@ IMG_SIZE = 224
 
 
 
-IMAGE_CONFIDENCE_THRESHOLD = 0.55  # Increased from 0.40 to reduce false positives
+IMAGE_CONFIDENCE_THRESHOLD = 0.70  # Increased to 0.70 for medical-grade accuracy
 SYMPTOM_CONFIDENCE_THRESHOLD_STRONG = 75
 SYMPTOM_CONFIDENCE_THRESHOLD_WEAK = 60
 HEALTHY_CLASS_NAMES = ('healthy', 'normal', 'clear_skin')
@@ -203,8 +203,8 @@ class MLProcessor:
 
                 uncertain_result = {
                     'name': 'No Confident Match Found',
-                    'description': 'The AI model could not identify a known disease with high confidence.',
-                    'solution': 'Please consult a professional for a definitive diagnosis.',
+                    'description': 'The AI model could not identify a known disease with high confidence. This may happen if the image is unclear, not related to the supported domains, or contains a healthy subject not recognized as such.',
+                    'solution': 'Please ensure you are uploading a clear photo of a plant leaf, skin area, or animal. If symptoms persist, consult a professional.',
                 }
                 return uncertain_result, 0, "N/A", "Uncertain"  # Return 0 confidence for uncertain matches
 

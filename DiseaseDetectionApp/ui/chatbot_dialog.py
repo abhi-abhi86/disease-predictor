@@ -89,9 +89,9 @@ class ChatbotWorker(QObject):
         if not self.message:
             return
 
-        greetings = ['hello', 'hi', 'hey']
+        greetings = ['hello', 'hi', 'hey', 'hallo', 'greetings', 'sup', 'what\'s up']
         if self.message in greetings:
-            self.response_ready.emit("Hello! Ask me for information about a disease. For example, 'What are the symptoms of Ringworm?'")
+            self.response_ready.emit("Hallo! Ask me for information about a disease. For example, 'What are the symptoms of Ringworm?'")
             return
 
         if process is None:
