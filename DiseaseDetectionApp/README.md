@@ -135,7 +135,7 @@ DiseaseDetectionApp/
 │   ├── plant/                  # Plant diseases
 │   ├── human/                  # Human diseases
 │   └── animal/                 # Animal diseases
-├── train_disease_classifier.py # Model training script
+├── train_disease_classifier.py # Model training script (use run_train.sh)
 ├── predict_disease.py          # Disease prediction script
 ├── comprehensive_test.py       # Comprehensive test suite
 ├── setup.py                    # Py2app setup script

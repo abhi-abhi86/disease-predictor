@@ -172,6 +172,8 @@ If you want to train your own model:
 ```bash
 cd DiseaseDetectionApp
 python train_disease_classifier.py
+# Or if you encounter SSL errors:
+./run_train.sh
 ```
 
 The pre-trained model is included, so this step is optional.
@@ -231,7 +233,7 @@ cd DiseaseDetectionApp
 python predict_disease.py path/to/image.jpg
 
 # Train custom model
-python train_disease_classifier.py
+./run_train.sh
 
 # Run tests
 python test_disease_detection.py
@@ -529,7 +531,7 @@ pip install google-api-python-client
 
 ```bash
 cd DiseaseDetectionApp
-python train_disease_classifier.py
+./run_train.sh
 ```
 </details>
 
