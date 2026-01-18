@@ -2,8 +2,11 @@
 # Quick Start Script for Disease Predictor Application
 # Usage: ./run_app.sh
 
+# Get the directory of the script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Activate virtual environment
-source venv/bin/activate
+source "$DIR/venv/bin/activate"
 
 # Run the application
-python main.py
+python "$DIR/main.py"
