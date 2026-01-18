@@ -47,3 +47,5 @@ python "$DIR/main.py"
 
 # Note: The virtual environment remains active after script execution
 # To deactivate manually, run: deactivate
+
+
